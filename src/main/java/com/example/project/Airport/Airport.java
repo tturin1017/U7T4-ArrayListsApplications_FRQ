@@ -19,60 +19,16 @@ public class Airport  {
      *  as described in part (a)
      */
     public double getTotalRevenue() {
-        double totalRevenue = 0;
-
-        for (Flight flight : allFlights) {
-            if (flight.getNumPassengers() > flight.getCapacity()) {
-                totalRevenue += flight.getPrice() * flight.getCapacity();
-            } else {
-                totalRevenue += flight.getPrice() * flight.getNumPassengers();
-            }
-        }
-        return totalRevenue;
+        /* to be implemented in part (a) */
+        return 0.0;
     }
 
     /** Updates the list of flights by removing certain flights and
      *  returns the total number of passengers whose flights were removed,
      *  as described in part (b)
      */
-    public int updateFlights2() {
-        // sum of total passengers with removed flights
-        int numPassengers = 0;
-
-        // iterate in reverse; could also go forward and i-- inside code
-        for (int i = allFlights.size() - 1; i >= 0; i--) {
-            Flight currentFlight = allFlights.get(i);
-
-            // get 20% of capacity; cast to int since we are talking about whole people
-            int minCapacity = (int) (currentFlight.getCapacity() * 0.2);
-            int passengers = currentFlight.getNumPassengers();
-            if (passengers < minCapacity) {
-                // update sum and remove flight
-                numPassengers += passengers;
-                allFlights.remove(i); // since we are iterating in reverse, no need to i--
-            }
-        }
-        return numPassengers;
-    }
-
     public int updateFlights() {
-        // sum of total passengers with removed flights
-        int numPassengers = 0;
-
-        // iterate in reverse; could also go forward and i-- inside code
-        for (int i = 0; i < allFlights.size(); i++) {
-            Flight currentFlight = allFlights.get(i);
-
-            // get 20% of capacity; cast to int since we are talking about whole people
-            int minCapacity = (int) (currentFlight.getCapacity() * 0.2);
-            int passengers = currentFlight.getNumPassengers();
-            if (passengers < minCapacity) {
-                // update sum and remove flight
-                numPassengers += passengers;
-                allFlights.remove(i);
-                i--;    // "back up" to avoid skipping after removal
-            }
-        }
-        return numPassengers;
+        /* to be implemented in part (b) */
+        return 0;
     }
 }
