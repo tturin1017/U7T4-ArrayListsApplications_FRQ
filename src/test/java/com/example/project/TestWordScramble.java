@@ -34,7 +34,6 @@ public class TestWordScramble {
 
     @Test
     public void testScrambleOrRemovePARTB(){
-        System.out.println("--------- TEST scrambleOrRemove (part b) ---------");
         ArrayList<String> testWordList = new ArrayList<String>(Arrays.asList("TAN", "ABRACADABRA", "WHOA", "APPLE", "EGGS"));
         testWordList = WordScramble.scrambleOrRemove(testWordList);
         ArrayList<String> expectedAfterScrambleRemove = new ArrayList<String>(Arrays.asList("TNA", "BARCADABARA", "PAPLE"));
